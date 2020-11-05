@@ -16,4 +16,4 @@ class Image(Raster):
         image = open_image(image_path)
         def function(x, y):
             return get_coordinate(x, y, image, scale)
-        super().make_cut(function, (scale*image.size[0]-1, scale*image.size[1]-1))
+        super().make_cut(function, (scale*image.size[0]-2, scale*image.size[1]-2))
